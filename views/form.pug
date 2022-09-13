@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title My first Pug page!
+  body
+    a(href='/') Back!
+    form(action='/new', method='POST', class='box')
+      p Your name:
+        input(type='text', name="AuthorName", placeholder='Sammy', required)
+      p Message:
+        input(type='text', name="MessageText", placeholder='What a wonderful day!', required)
+      button(type='submit') Submit

@@ -1,0 +1,41 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.message-card{
+  max-width: 70rem;
+  margin: auto;
+  margin-bottom: 5rem;
+  border-radius: 0.8rem;
+  padding: 3rem 4rem 2rem;
+  background: white;
+  box-shadow: 0 3px 7px #00577759;
+}
+
+.box{
+  display: flex;
+  flex-flow: column;
+}
+
+
+/* ul li {
+  margin-bottom: 20px;
+  box-shadow: 0 3px 7px #00577759;
+  padding: 10px;
+  border-radius: 5px;
+  width: 320px;
+  transition: 0.2s ease;
+  position: relative;
+  left: 0;
+  font-size: 1em;
+} */
+/* .message-card footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+} */
