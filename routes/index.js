@@ -17,12 +17,13 @@ const messages = [
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render("index", { title: "Message Board", messages: messages });
+  res.render("index", { title: "Message Board", messages: messages, status: 200 });
 });
 
 /* GET new message page. */
 router.get("/new", function (req, res, next) {
-  res.render("form");
+  res.render("form", {status: 200});
+  // res.sendStatus(200);
 });
 
 /* Post after clicking submit button */
