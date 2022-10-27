@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  head
+    title My first Pug page!
+    //- link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    a(href='/') Back!
+    form(action='/edit-old', method='post')
+      div(class='line-card')
+        div(class='front')
+          p Character Name: 
+            input(type='text', name="name", value=theOne.name, required)
+          p His/Her Lines:
+            input(type='text', name="lines", value=theOne.lines, required)
+        div(class='behind')
+          button(type='submit' class='submitBtn') Submit

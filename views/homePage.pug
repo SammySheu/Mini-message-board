@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  script(src="./javascripts/delete.js" defer)
+  script(src="./javascripts/edit.js" defer) 
+  div(class='titleBox')
+    h1(class='h1Title')= title
+    p(class='pSubtitle') #{title} from Game of Thrones
+    a(href='/create-new')
+      button(id='addComment') Add another comment!
+  .data-in-mongoDB
+    each singleLine in classicLines
+        .line-card
+          div(class='front')
+            h2= singleLine.lines
+            footer
+              p=singleLine.name
+              p=singleLine.time    
+          div(class='behind')
+            button(class='editBtn' class=singleLine.name) Edit
+            button(id=singleLine.name, class='deleteBtn') Delete
+          
+  //- a(href='/create-new')
+  //-   button Add another comment!
+  

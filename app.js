@@ -7,6 +7,33 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+
+// // Import the mongoose module
+const mongoose = require('mongoose');
+
+// // Set up default mongoose connection
+const mongoDB = 'mongodb+srv://JonSnow:YouKnowNothing@cluster0.1vhrhcu.mongodb.net/Game-of-Thrones?retryWrites=true&w=majority'; 
+// mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
+
+mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true})
+  .then(() => {
+    console.log('Database connected!');
+    // const db = client.db('Game-of-Thrones-Classic-Lines');
+  })
+  .catch(err => console.error(err))
+
+// // Get the default connection
+// const db = mongoose.connection;
+
+
+// db.once('open', _ => {
+//   console.log('Database connected:', mongoDB)
+// })
+// // Bind connection to error event (to get notification of connection errors)
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+
+
 var app = express();
 
 // view engine setup
@@ -15,7 +42,7 @@ app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 

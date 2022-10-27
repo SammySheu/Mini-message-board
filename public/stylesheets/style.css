@@ -3,11 +3,57 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.h1Title{
+  height: 70px;
+  margin: 0;
 }
 
-.message-card{
+.pSubtitle{
+  height: 30px;
+}
+
+button#addComment{
+  height: 70px;
+  width: 150px;
+}
+
+.titleBox{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  height: 140px;
+}
+
+a {
+  color: #00B7FF;
+  margin-right: 66px;
+}
+
+.editBtn{
+  height:50px; 
+  width: 150px;
+}
+
+.submitBtn{
+  height:50px;
+  width: 150px;
+}
+
+.deleteBtn{
+  height:50px;
+  width: 150px;
+}
+
+.behind{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.line-card{
+  display: flex;
+  justify-content: space-between;
   max-width: 70rem;
   margin: auto;
   margin-bottom: 5rem;

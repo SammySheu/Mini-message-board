@@ -16,7 +16,17 @@
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "confirm-dialog": "^0.1.2",
+    "dialogs": "^2.0.1",
+    "inquirer": "^9.1.4",
+    "mongoose": "^6.6.7",
+    "node-fetch": "^3.2.10",
+    "nodemon": "^2.0.19",
+    "popup-prompt": "^1.1.5",
+    "popups": "^1.1.3",
+    "prompt-confirm": "^2.0.4"
   },
-  "engines": { "node": "16.16.0" }
+  "engines": {
+    "node": "16.16.0"
+  }
 }

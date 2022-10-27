@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  head
+    title My first Pug page!
+  body
+    a(href='/') Back!
+    form(action='/create-new', method='POST')
+      div(class='line-card')
+        div(class='front')
+          p Character Name:
+            input(type='text', name="name", placeholder='Ygritte', required)
+          p His/Her Lines:
+            input(type='text', name="lines", placeholder='You know nothing, Jon Snow!', required)
+        div(class='behind')
+          button(type='submit' class='submitBtn') Submit
