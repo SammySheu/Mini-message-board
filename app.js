@@ -7,12 +7,14 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+const dotenv = require('dotenv');
+dotenv.config();
 
 // // Import the mongoose module
 const mongoose = require('mongoose');
 
 // // Set up default mongoose connection
-const mongoDB = 'mongodb+srv://JonSnow:YouKnowNothing@cluster0.1vhrhcu.mongodb.net/Game-of-Thrones?retryWrites=true&w=majority'; 
+const mongoDB = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.1vhrhcu.mongodb.net/Game-of-Thrones?retryWrites=true&w=majority`; 
 // mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true})

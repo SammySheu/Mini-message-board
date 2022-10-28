@@ -14,7 +14,7 @@ edit_parent.addEventListener('click', (e) => {
     })
     .then( (res) => res.json() )
     .then( (data) => {
-            console.log('Client side put request complete.');
+            // console.log('Client side put request complete.');
             const {redirectTo, editTarget} = data;
             console.log(redirectTo, editTarget);
             if(redirectTo){

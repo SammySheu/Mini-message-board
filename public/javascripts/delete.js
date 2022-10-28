@@ -12,7 +12,7 @@ node_parent.addEventListener('click', (e) => {
           })
     })
         .then( () => {
-            console.log('Client side request complete.');
+            // console.log('Client side request complete.');
             window.location.reload();
         });
     e.stopPropagation();

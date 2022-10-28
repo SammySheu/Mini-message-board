@@ -1,6 +1,2 @@
-Open this project on 11 Sep.
-
-Finish it on 14 Sep.
-
-Might later on working with CSS.
-
+1. This project is an CRUD app with Express applied and Mongo Atlas connected.
+2. User can add some comment cards with "Add another Comment" button, and each card has its "Edit" button and "Delete" button. 

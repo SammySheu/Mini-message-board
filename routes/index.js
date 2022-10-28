@@ -44,7 +44,7 @@ router.post('/create-new', async (req, res, next) => {
 
 router.post('/edit-old', async (req, res) => {
   const GOT_collections = db.collection('classiclines');
-  console.log(req.body);
+  // console.log(req.body);
   await GOT_collections.findOneAndUpdate(
     { name: req.body.name },
     {
@@ -66,8 +66,8 @@ router.post('/edit-old', async (req, res) => {
 
 router.put('/edit-:theOne', async (req, res) => {
   try{
-    console.log(`Here shows req.params.theOne ${req.params.theOne}`);
-    console.log(req.body.name);
+    // console.log(`Here shows req.params.theOne ${req.params.theOne}`);
+    // console.log(req.body.name);
     res.send({ redirectTo: `/edit-${req.params.theOne}`, editTarget: req.body });
   } catch(error){
     res.status(500).send(error);
@@ -78,7 +78,7 @@ router.delete('/delete-one', async (req, res) => {
   const GOT_collections = db.collection('classiclines');
   try{
     await GOT_collections.deleteOne({name: req.body.name})
-    console.log('Delete success');
+    // console.log('Delete success');
     return res.sendStatus(200);
   } catch(error) {
     console.error(error)
