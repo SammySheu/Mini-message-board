@@ -25,7 +25,9 @@ router.get("/create-new", function (req, res, next) {
 
 router.get('/edit-:theOne', async (req, res) => {
   const GOT_collections = db.collection('classiclines');
+  console.log(`the name you want to edit ${req.params.theOne}`);
   const theOne = await GOT_collections.findOne({name:req.params.theOne});
+  console.log(theOne);
   return res.render('editPage', {theOne, status: 200});
 })
 
@@ -44,6 +46,7 @@ router.post('/create-new', async (req, res, next) => {
 
 router.post('/edit-old', async (req, res) => {
   const GOT_collections = db.collection('classiclines');
+  console.log(req.body.name);
   // console.log(req.body);
   await GOT_collections.findOneAndUpdate(
     { name: req.body.name },
@@ -67,7 +70,7 @@ router.post('/edit-old', async (req, res) => {
 router.put('/edit-:theOne', async (req, res) => {
   try{
     // console.log(`Here shows req.params.theOne ${req.params.theOne}`);
-    // console.log(req.body.name);
+    console.log(req.body.name);
     res.send({ redirectTo: `/edit-${req.params.theOne}`, editTarget: req.body });
   } catch(error){
     res.status(500).send(error);

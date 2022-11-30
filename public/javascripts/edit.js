@@ -2,8 +2,10 @@ const edit_parent = document.querySelector('.data-in-mongoDB');
 
 edit_parent.addEventListener('click', (e) => {
     if(e.target.textContent !== 'Edit') return;    
-    const idName = e['target']['className'].split(' ')[1];
+    let [rest, ...idName] = e['target']['className'].split(' ');
+    idName = idName.join(' ');
     console.log(idName);
+
 
     fetch(`/edit-${idName}`,{
         method: 'put',
